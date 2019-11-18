@@ -12,6 +12,15 @@ public class AnalisadorSintatico {
     
     public void analisar(Stack<String> tokens) {
         
+        Stack<Integer> pilhaInteiro = new Stack<>();
+        
+        while(!tokens.isEmpty())
+        {
+            if (linguagem.containsKey(tokens.peek()))
+            {
+                pilhaInteiro.add(linguagem.get(tokens.pop()));
+            }
+        }
     }    
     
     /**
