@@ -12,10 +12,6 @@ public class AnalisadorSintatico {
     
     public void analisar(Stack<String> tokens) {
         
-        for (int i=0;i < tokens.size(); i++)
-        {
-          System.out.println(linguagem.get(tokens.get(i)));
-        }
     }    
     
     /**

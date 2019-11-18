@@ -32,7 +32,7 @@ public class Gramatica {
         LINGUAGEM.put(";", 47);
         LINGUAGEM.put(".", 49);
         
-        //simbolos não terminais (que possuem deriações em outros blocos)
+        //simbolos não terminais (que possuem derivações em outros blocos)
         LINGUAGEM.put("PROGRAMA", 52);
         LINGUAGEM.put("BLOCO", 53);
         LINGUAGEM.put("DCLROT", 54);
@@ -101,7 +101,7 @@ public class Gramatica {
     }
 
      /**
-     * Este mtodo retorna uma lista com os cdigos equivalentes as palavras que
+     * Este mtodo retorna uma lista com os codigos equivalentes as palavras que
      * foram derivadas
      */
     public static Integer[] geraDadosCruzamentoTabParsingToken(String str) {

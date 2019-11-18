@@ -19,19 +19,20 @@ public class AnalisadorLexico {
         }    
         
        Stack<String> pilhaInvertida = new Stack<>();
-        
-       int i = pilhaTokens.size();
+       Integer valor = null;
        
         while(!pilhaTokens.isEmpty())
         {
-            pilhaInvertida.push(pilhaTokens.pop());
+            String elemento = pilhaTokens.pop();
+            
+            try {
+                valor = Integer.valueOf(elemento);
+                elemento = "INTEIRO";
+            }catch(Exception e) {
+            }
+            
+            pilhaInvertida.push(elemento);
         }
-        
-//        Integer valor = null;
-//        try {
-//            valor = Integer.valueOf("1050");
-//        }catch(Exception e) {
-//        }
         
         //aqui
         
