@@ -23,7 +23,7 @@ public class Main {
             + "  UNTIL X > 10 ; "
             + "END . "
             ;
-    
+            
     /**
      Veja as instruções dentro dos métodos gerarTokens() e analisar()
      */
@@ -41,3 +41,5 @@ public class Main {
         new Main().iniciar();
     }
 }
+
+//arthur esteve aqui
