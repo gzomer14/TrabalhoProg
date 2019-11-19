@@ -16,9 +16,21 @@ public class AnalisadorSintatico {
         
         while(!tokens.isEmpty())
         {
-            if (linguagem.containsKey(tokens.peek()))
+            Integer teste = getIdentificadorOuInteiro(tokens.peek());
+            
+            Integer topoTokens = linguagem.get(tokens.peek());
+            
+            if (topoTokens != null)
             {
-                pilhaInteiro.add(linguagem.get(tokens.pop()));
+                tokens.pop();
+            }
+            else
+            {
+                Integer identOrInt = getIdentificadorOuInteiro(tokens.peek());
+                if (identOrInt != null)
+                {
+                    tokens.pop();
+                }
             }
         }
     }    
