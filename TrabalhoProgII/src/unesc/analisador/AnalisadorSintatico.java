@@ -12,16 +12,15 @@ public class AnalisadorSintatico {
     
     public void analisar(Stack<String> tokens) {
         
-        Stack<Integer> pilhaInteiro = new Stack<>();
+        Stack<Integer> pilhaInt = new Stack<>();
         
         while(!tokens.isEmpty())
-        {
-            Integer teste = getIdentificadorOuInteiro(tokens.peek());
-            
+        {   
             Integer topoTokens = linguagem.get(tokens.peek());
             
             if (topoTokens != null)
             {
+                pilhaInt.push(topoTokens);
                 tokens.pop();
             }
             else
@@ -29,6 +28,7 @@ public class AnalisadorSintatico {
                 Integer identOrInt = getIdentificadorOuInteiro(tokens.peek());
                 if (identOrInt != null)
                 {
+                    pilhaInt.push(identOrInt);
                     tokens.pop();
                 }
             }
