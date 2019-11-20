@@ -25,11 +25,11 @@ public class AnalisadorLexico {
         {
             String elemento = pilhaTokens.pop();
             
-            try {
-                valor = Integer.valueOf(elemento);
-                elemento = "INTEIRO";
-            }catch(Exception e) {
-            }
+//            try {
+//                valor = Integer.valueOf(elemento);
+//                elemento = "INTEIRO";
+//            }catch(Exception e) {
+//            }
             
             pilhaInvertida.push(elemento);
         }
