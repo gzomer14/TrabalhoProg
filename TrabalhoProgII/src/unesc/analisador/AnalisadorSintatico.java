@@ -42,33 +42,29 @@ public class AnalisadorSintatico {
             //Não terminal
             else
             {
-                
+                String opcoes = gramatica.get(pilhaIntTopo + "," + tokensTopo);
+
+                Integer[] opcoesInteger = Gramatica.geraDadosCruzamentoTabParsingToken(opcoes);
+
+                if (opcoes == null)
+                {
+                    pilhaInt.pop();
+                }
+                else
+                {
+                    pilhaInt.pop();
+                    for (int i = opcoesInteger.length - 1; i >=0 ; i--)
+                    {
+                        pilhaInt.push(opcoesInteger[i]);
+                    }
+                }
             }
         }
-            
-        
-        //Minha parte
-//        Stack<Integer> pilhaInt = new Stack<>();
-//        
-//        while(!tokens.isEmpty())
-//        {   
-//            Integer topoTokens = linguagem.get(tokens.peek());
-//            
-//            if (topoTokens != null)
-//            {
-//                pilhaInt.push(topoTokens);
-//                tokens.pop();
-//            }
-//            else
-//            {
-//                Integer identOrInt = getIdentificadorOuInteiro(tokens.peek());
-//                if (identOrInt != null)
-//                {
-//                    pilhaInt.push(identOrInt);
-//                    tokens.pop();
-//                }
-//            }
-//        }
+
+        if (tokens.empty())
+        {
+            System.out.println("Código correto");
+        }
     }    
     
     /**
