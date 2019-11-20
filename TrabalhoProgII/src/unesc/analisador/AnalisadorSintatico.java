@@ -47,15 +47,6 @@ public class AnalisadorSintatico {
         }
             
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
         //Minha parte
 //        Stack<Integer> pilhaInt = new Stack<>();
 //        
