@@ -2,6 +2,8 @@ package unesc.analisador;
 
 
 import unesc.gramatica.Gramatica;
+
+import java.lang.reflect.Array;
 import java.util.Map;
 import java.util.Stack;
 
@@ -35,7 +37,7 @@ public class AnalisadorSintatico {
                 }
                 else
                 {
-                    System.out.println("Erro encontrado! A palavra " + tokensTopo + "esta em uma posição incorreta");
+                    System.out.println("Erro encontrado!\nO valor " + tokensTopo + " esta em uma posição incorreta");
                     break;
                 }
             }
