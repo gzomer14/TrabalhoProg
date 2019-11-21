@@ -41,5 +41,3 @@ public class Main {
         new Main().iniciar();
     }
 }
-
-//arthur esteve aqui

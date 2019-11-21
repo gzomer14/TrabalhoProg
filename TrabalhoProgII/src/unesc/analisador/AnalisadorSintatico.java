@@ -35,7 +35,7 @@ public class AnalisadorSintatico {
                 }
                 else
                 {
-                    System.out.println("Erro encontrado no código");
+                    System.out.println("Erro encontrado! A palavra " + tokensTopo + "esta em uma posição incorreta");
                     break;
                 }
             }

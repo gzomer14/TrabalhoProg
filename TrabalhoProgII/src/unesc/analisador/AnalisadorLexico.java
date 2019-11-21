@@ -27,8 +27,6 @@ public class AnalisadorLexico {
             pilhaInvertida.push(elemento);
         }
         
-        //aqui
-        
         return pilhaInvertida;
     }
     
